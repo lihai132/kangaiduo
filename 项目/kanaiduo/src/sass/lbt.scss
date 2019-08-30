@@ -3,7 +3,7 @@
 }
 
 .lbt {
-    margin-bottom: 500px;
+
 
     .list {
         border-bottom: 2px solid blue;
@@ -189,7 +189,7 @@
                             position: absolute;
                             top: 38px;
                             left: -10px;
-                            z-index: 2;
+                            z-index: 6;
                             background: #fff;
                             border: 1px solid #ccc;
 
@@ -310,11 +310,11 @@
 
 
 
-        .left {
+        .lbt-nav-left {
             position: absolute;
             width: 810px;
             height: 400px;
-            left: 207px;
+            left: 206px;
             top: 0;
             z-index: 2;
 

@@ -1,3 +1,291 @@
 * {
     box-sizing: border-box;
 }
+
+.nav-top {
+    margin-top: 30px;
+    width: 100%;
+
+    .center {
+        width: 1200px;
+        margin: auto;
+
+        .top1 {
+            margin-bottom: 30px;
+
+            .title {
+                height: 36px;
+                margin-bottom: 33px;
+
+                h2 {
+                    line-height: 36px;
+                    font-size: 24px;
+                    font-family: "微软雅黑";
+                    font-weight: normal;
+                    float: left;
+                    width: 100px;
+
+                }
+
+                .left {
+                    float: left;
+                    width: 970px;
+                    border-top: 1px dashed #ccc;
+                    margin-top: 17px;
+                }
+
+                .right {
+                    float: right;
+
+                    .right-1 {
+                        float: left;
+                        font-size: 18px;
+                        line-height: 36px;
+                        margin-right: 15px;
+                    }
+
+                    .right-2 {
+                        float: left;
+
+                        .p {
+                            // width: 24px;
+                            // height: 24px;
+                            float: left;
+                            margin-top: 5px;
+                            margin-right: 10px;
+                            // background: #000;
+                        }
+
+                        .n {
+                            // width: 24px;
+                            // height: 24px;
+                            float: left;
+                            margin-top: 5px;
+                            // background: #000;
+                        }
+                    }
+                }
+            }
+
+            .top1-nav {
+                height: 271px;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+
+
+                // .top1-nav-div {
+                //     // position: absolute;
+                //     width: 100%;
+
+                .ul-1 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+
+
+
+                    li:nth-child(5) {
+                        border: none;
+                    }
+
+                    li:nth-child(10) {
+                        border: none;
+                    }
+
+
+
+                    li {
+                        height: 100%;
+                        margin-right: 24px;
+                        flex-shrink: 0;
+                        position: relative;
+                        width: 18%;
+                        border-right: 1px solid #ccc;
+                        text-align: center;
+                        padding-bottom: 28px;
+
+                        .jiekou {
+                            position: absolute;
+                            top: 5px;
+                            left: 70%;
+                            width: 56px;
+                            height: 56px;
+                            background-image: url(http://res.360kad.com/theme/default/img/product/2016new/zebg.png);
+
+                            background-repeat: no-repeat;
+
+                            span:nth-child(1) {
+                                font-size: 20px;
+                                line-height: 56px;
+                                color: #fff;
+                            }
+
+                            span:nth-child(2) {
+                                font-size: 14px;
+                                line-height: 56px;
+                                color: #fff;
+                            }
+                        }
+
+                        .tp {
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                        }
+
+                        .li-dl {
+                            text-align: left;
+
+                            dd:nth-child(1) {
+                                a {
+                                    font-size: 14px;
+                                    color: rgba($color: #000, $alpha: 0.5);
+                                }
+                            }
+
+                            dd:nth-child(2) {
+                                span:nth-child(1) {
+                                    font-size: 14px;
+                                    color: red;
+                                    margin-right: 10px;
+                                }
+
+                                span:nth-child(2) {
+                                    font-size: 12px;
+                                    color: rgba($color: #000, $alpha: 0.5);
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // }
+            }
+        }
+
+        .top2 {
+            margin-bottom: 20px;
+
+            .title {
+                height: 36px;
+                margin-bottom: 33px;
+
+                h2 {
+                    line-height: 36px;
+                    font-size: 24px;
+                    font-family: "微软雅黑";
+                    font-weight: normal;
+                    float: left;
+                    width: 100px;
+
+                }
+
+                .left {
+                    float: left;
+                    width: 970px;
+                    border-top: 1px dashed #ccc;
+                    margin-top: 17px;
+                }
+
+                .right {
+                    float: right;
+
+                    .right-3 {
+                        float: left;
+                        font-size: 18px;
+                        line-height: 36px;
+                        margin-right: 15px;
+                    }
+
+
+                }
+            }
+
+            .top2-nav {
+                height: 271px;
+                width: 100%;
+
+
+
+
+                // .top1-nav-div {
+                //     // position: absolute;
+                //     width: 100%;
+
+                .ul-2 {
+
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+
+
+
+
+
+
+
+                    li {
+                        height: 100%;
+                        margin-right: 24px;
+                        flex-shrink: 0;
+
+                        width: 19%;
+                        border: 1px solid #ccc;
+                        text-align: center;
+                        padding-bottom: 28px;
+
+
+
+                        .tp {
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                        }
+
+                        .li-dl {
+                            text-align: left;
+                            margin-left: 20px;
+
+                            dd:nth-child(1) {
+                                margin-bottom: 10px;
+
+                                a {
+                                    width: 60%;
+
+                                    display: block;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+
+                                    text-overflow: ellipsis;
+                                    font-size: 14px;
+
+
+                                    color: rgba($color: #000, $alpha: 0.5);
+                                }
+                            }
+
+                            dd:nth-child(2) {
+                                span:nth-child(1) {
+                                    font-size: 14px;
+                                    color: red;
+                                    margin-right: 10px;
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+
+                // }
+            }
+
+
+        }
+    }
+}

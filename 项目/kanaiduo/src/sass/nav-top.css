@@ -1,3 +1,237 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
+}
+
+.nav-top {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.nav-top .center {
+  width: 1200px;
+  margin: auto;
+}
+
+.nav-top .center .top1 {
+  margin-bottom: 30px;
+}
+
+.nav-top .center .top1 .title {
+  height: 36px;
+  margin-bottom: 33px;
+}
+
+.nav-top .center .top1 .title h2 {
+  line-height: 36px;
+  font-size: 24px;
+  font-family: "微软雅黑";
+  font-weight: normal;
+  float: left;
+  width: 100px;
+}
+
+.nav-top .center .top1 .title .left {
+  float: left;
+  width: 970px;
+  border-top: 1px dashed #ccc;
+  margin-top: 17px;
+}
+
+.nav-top .center .top1 .title .right {
+  float: right;
+}
+
+.nav-top .center .top1 .title .right .right-1 {
+  float: left;
+  font-size: 18px;
+  line-height: 36px;
+  margin-right: 15px;
+}
+
+.nav-top .center .top1 .title .right .right-2 {
+  float: left;
+}
+
+.nav-top .center .top1 .title .right .right-2 .p {
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.nav-top .center .top1 .title .right .right-2 .n {
+  float: left;
+  margin-top: 5px;
+}
+
+.nav-top .center .top1 .top1-nav {
+  height: 271px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li:nth-child(5) {
+  border: none;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li:nth-child(10) {
+  border: none;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li {
+  height: 100%;
+  margin-right: 24px;
+  flex-shrink: 0;
+  position: relative;
+  width: 18%;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  padding-bottom: 28px;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li .jiekou {
+  position: absolute;
+  top: 5px;
+  left: 70%;
+  width: 56px;
+  height: 56px;
+  background-image: url(http://res.360kad.com/theme/default/img/product/2016new/zebg.png);
+  background-repeat: no-repeat;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li .jiekou span:nth-child(1) {
+  font-size: 20px;
+  line-height: 56px;
+  color: #fff;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li .jiekou span:nth-child(2) {
+  font-size: 14px;
+  line-height: 56px;
+  color: #fff;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li .tp {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li .li-dl {
+  text-align: left;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li .li-dl dd:nth-child(1) a {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li .li-dl dd:nth-child(2) span:nth-child(1) {
+  font-size: 14px;
+  color: red;
+  margin-right: 10px;
+}
+
+.nav-top .center .top1 .top1-nav .ul-1 li .li-dl dd:nth-child(2) span:nth-child(2) {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: line-through;
+}
+
+.nav-top .center .top2 {
+  margin-bottom: 20px;
+}
+
+.nav-top .center .top2 .title {
+  height: 36px;
+  margin-bottom: 33px;
+}
+
+.nav-top .center .top2 .title h2 {
+  line-height: 36px;
+  font-size: 24px;
+  font-family: "微软雅黑";
+  font-weight: normal;
+  float: left;
+  width: 100px;
+}
+
+.nav-top .center .top2 .title .left {
+  float: left;
+  width: 970px;
+  border-top: 1px dashed #ccc;
+  margin-top: 17px;
+}
+
+.nav-top .center .top2 .title .right {
+  float: right;
+}
+
+.nav-top .center .top2 .title .right .right-3 {
+  float: left;
+  font-size: 18px;
+  line-height: 36px;
+  margin-right: 15px;
+}
+
+.nav-top .center .top2 .top2-nav {
+  height: 271px;
+  width: 100%;
+}
+
+.nav-top .center .top2 .top2-nav .ul-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-top .center .top2 .top2-nav .ul-2 li {
+  height: 100%;
+  margin-right: 24px;
+  flex-shrink: 0;
+  width: 19%;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding-bottom: 28px;
+}
+
+.nav-top .center .top2 .top2-nav .ul-2 li .tp {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-top .center .top2 .top2-nav .ul-2 li .li-dl {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.nav-top .center .top2 .top2-nav .ul-2 li .li-dl dd:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.nav-top .center .top2 .top2-nav .ul-2 li .li-dl dd:nth-child(1) a {
+  width: 60%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-top .center .top2 .top2-nav .ul-2 li .li-dl dd:nth-child(2) span:nth-child(1) {
+  font-size: 14px;
+  color: red;
+  margin-right: 10px;
 }
