@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>pc轮播图</title>
+	<link rel="stylesheet" href="../css/swiper.css">
+	<script src="../js/swiper.min.js"></script>
+	<style type="text/css">
+		.swiper-container {
+			width: 379px;
+			height: 490px;
+			background: #ccc;
+		}
+
+		.swiper-slide {
+			font-size: 60px;
+			text-align: center;
+			line-height: 300px;
+		}
+
+		.swiper-pagination-bullet {
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			color: #fff;
+			background: #666;
+			font-size: 12px;
+		}
+
+		.swiper-pagination-bullet-active {
+			color: #fff;
+			background: orangered;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="swiper-container" id="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background: lavender;"><img
+					src="http://image.360kad.com/group2/M00/90/FC/CgAgFVuGNXuAHkL6AAJCbXHa_9g797.jpg" alt=""></div>
+			<div class="swiper-slide" style="background: lavenderblush;"><img
+					src="http://image.360kad.com/group2/M00/41/14/CgAgFVqnZNaAJTr8AAGVuuhmWL4842.jpg" alt=""></div>
+			<div class="swiper-slide" style="background: lawngreen;"><img
+					src="http://image.360kad.com/group2/M00/1B/4D/CgAgFVoTnYmAf0WJAAFOHlGeMUk934.jpg" alt=""></div>
+			<div class="swiper-slide" style="background: lemonchiffon;"><img
+					src="http://image.360kad.com/group2/M00/41/14/CgAgFVqnZLOAYHDeAAJica51hN8472.jpg" alt=""></div>
+			<div class="swiper-slide" style="background: lightcoral;"><img
+					src="http://image.360kad.com/group2/M00/1B/4C/CgAgFVoTnQKAcOEVAAFNf1wgN0c781.jpg" alt=""></div>
+
+
+		</div>
+		<!--按钮-->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+		<!--分页-->
+		<div class="swiper-pagination"></div>
+	</div>
+	<script type="text/javascript">
+		var s1 = new Swiper('.swiper-container', {
+			autoplay: { //自动轮播+延时两秒
+				delay: 2000,
+				disableOnInteraction: false
+			},
+			loop: true, //无缝回路轮播
+			speed: 500, //切换速度
+			navigation: { //上下按钮
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			pagination: { //焦点跟随
+				el: '.swiper-pagination',
+				clickable: true, //点击焦点跳到指定图片
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + (index + 1) + '</span>'; //生成焦点数字
+				}
+			},
+			mousewheel: true //滚动滑轮可以切图
+
+		});
+
+		var oBox = document.getElementById('swiper-container');
+
+		oBox.onmouseover = function () { //鼠标经过停止
+			s1.autoplay.stop();
+		}
+
+		oBox.onmouseout = function () { //鼠标经过离开
+			s1.autoplay.start();
+		}
+	</script>
+</body>
+
+</html>

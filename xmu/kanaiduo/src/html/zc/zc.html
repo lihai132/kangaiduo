@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/base.css">
+    <link rel="stylesheet" href="sass/zc.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="zclb">
+        <div class="header">
+            <div class="logo"><img src="http://res2.360kad.com/theme/user/img/login_logo.jpg" alt=""></div>
+            <div class="t1">
+                如你已有账户 <a href="">请登录</a>
+            </div>
+            <div class="t2"><img src="../images/1/设置_wps图片.png" alt=""><a href="">帮助</a></div>
+            <div class="t3"><img src="../images/1/BAI-客服_wps图片.png" alt=""><a href="">在线客服</a></div>
+        </div>
+        <div class="nv">
+            <div class="center">
+                <form action="">
+                    <div class="title">
+                        <div class="d-left"><img src="../images/1/手机_wps图片.png" alt="">手机注册</div>
+                        <div class="heng"></div>
+                    </div>
+
+                    <div class="sj">
+                        <span>手机号码：</span>
+                        <input type="text" class="sjhm">
+                        <div class="sjtx"></div>
+                    </div>
+                    <div class="yzm">
+                        <span class="s1">验证码：</span>
+
+                        <input type="text" class="yzmk">
+
+                        <canvas width="74" height="40" id="captcha" class="captcha"></canvas>
+                        <span class="s2">请输入验证码</span>
+
+                        <div class="yzmtx"></div>
+
+                    </div>
+
+
+                    <div class="jym">
+                        <span>校验码：</span>
+                        <input type="text" class="jymk">
+                        <button class="bt1">获取校验码</button>
+                        <div class="jymtext"></div>
+                    </div>
+
+                    <div class="mm1">
+                        <span>设置密码：</span>
+                        <input type="text" class="mm1k">
+                        <div class="mmtx"></div>
+                    </div>
+
+                    <div class="mm2">
+                        <span>确认密码：</span>
+                        <input type="text" class="mm2k">
+
+                        <div class="mmtx1"></div>
+                    </div>
+
+                    <div class="text1"><input type="checkbox" id="autologin" name="autologin" class="autologin">
+                        我已阅读并同意 <a href="http://www.gjw.com/help/show-id-47.htm">《康爱多网上药店服务协议》</a></div>
+
+                    <button class="zcan">注册</button>
+                </form>
+
+
+
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/captcha.js"></script>
+
+    <script src="js/zc.js"></script>
+</body>
+
+</html>

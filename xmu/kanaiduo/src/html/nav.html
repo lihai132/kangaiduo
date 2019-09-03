@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../sass/nav.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="center">
+            <!-- 阶层1 -->
+            <div class="jc1">
+                <div class="title">
+                    <h2>1F 家庭常备</h2>
+                    <div class="title-right">
+                        <dl>
+                            <dt>热门关键字：</dt>
+                            <dd class="dd1"><a href="">皮肤瘙痒</a></dd>
+                            <dd class="dd1"><a href="">皮炎湿疹</a></dd>
+                            <dd class="dd1"><a href="">跌打损伤</a></dd>
+                        </dl>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- 阶层2 -->
+            <div class="jc2">
+                <div class="title">
+                    <h2>2F 母婴乐园</h2>
+                    <div class="title-right">
+                        <dl>
+                            <dt>热门关键字：</dt>
+                            <dd class="dd1"><a href="">宝宝湿疹</a></dd>
+                            <dd class="dd1"><a href="">妊娠纹</a></dd>
+
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!-- 阶层3 -->
+            <div class="jc3">
+                <div class="title">
+                    <h2>3F 男科中心</h2>
+                    <div class="title-right">
+                        <dl>
+                            <dt>热门关键字：</dt>
+                            <dd class="dd1"><a href="">滋阴补肾</a></dd>
+                            <dd class="dd1"><a href="">阳痿早泄</a></dd>
+                            <dd class="dd1"><a href="">前列腺贴</a></dd>
+
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 阶层4 -->
+            <div class="jc4">
+                <div class="title">
+                    <h2>4F 滋补保健</h2>
+                    <div class="title-right">
+                        <dl>
+                            <dt>热门关键字：</dt>
+                            <dd class="dd1"><a href="">胶原蛋白</a></dd>
+                            <dd class="dd1"><a href="">美白抗衰</a></dd>
+                            <dd class="dd1"><a href="">药食煲汤料</a></dd>
+
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 阶层5 -->
+            <div class="jc5">
+                <div class="title">
+                    <h2>5F 器械商城</h2>
+                    <div class="title-right">
+                        <dl>
+                            <dt>热门关键字：</dt>
+                            <dd class="dd1"><a href="">颈椎牵引器</a></dd>
+                            <dd class="dd1"><a href="">糖尿病</a></dd>
+                            <dd class="dd1"><a href="">血压计</a></dd>
+
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/nav.js"></script>
+    <script>
+        $(function () {
+            class Nav {
+                constructor(json) {
+                    this.data = json;
+                    // console.log(this.data);
+
+
+                }
+
+                //初始化
+                init() {
+                    this.createJieceng();
+                }
+
+                //生成阶层区
+                createJieceng() {
+                    let data = this.data;
+                    console.log(data);
+
+                    function create(list) {
+
+                        let html = `
+                <div class="nav">
+     
+                <div class="nav-left">
+                    <ul class="nav-left-ul1">
+                        
+                        ${list.bingzheng.map((e1)=>{
+                            return `<li><a href="">${e1}</a></li>`
+                        }).join("")}
+                    </ul>
+            
+                    <ul class="nav-left-ul2">
+            
+                    ${list.src1.map((e2)=>{
+                      return `<li><a href=""><img
+                               src="${e2}"
+                                alt=""></a></li>`
+                    }).join("")}
+                        
+                        
+                    </ul>
+                </div>
+     
+                <div class="nav-lbt"></div>
+     
+                <div class="nav-right">
+                    <ul>
+                        <li class="right-tp"><a href=""><img
+                                    src="${list.src3}"
+                                    alt=""></a>
+                        </li>
+     
+            
+                        ${list.src2.map((e3,i)=>{
+                            return ` <li class="right-ul-li">
+            
+                            <p><a href="">
+                                    <img src="${e3}"
+                                        alt="">
+                                </a></p>
+                            <p><a href="">${list.title1[i]}</a></p>
+                            <p><a href="">${list.title2[i]}</a></p>
+                            <p>${list.price[i]}</p>
+            
+            
+                        </li>`
+                        }).join("")}
+                       
+            
+                     </ul>
+                 </div>
+            
+              </div> `;
+
+                        return html;
+                    };
+
+
+
+
+
+
+                    let html1 = create(data[0]);
+                    $(".jc1").append(html1);
+
+                    let html2 = create(data[1]);
+                    $(".jc2").append(html2);
+
+                    let html3 = create(data[2]);
+                    $(".jc3").append(html3);
+
+                    let html4 = create(data[3]);
+                    $(".jc4").append(html4);
+
+                    let html5 = create(data[4]);
+                    $(".jc5").append(html5);
+                    console.log("引入了轮播图");
+                    $(".nav-lbt").load("html/lbt2.html", function () {
+                        console.log("引入了轮播图");
+
+                    });
+
+
+                    $(".nav-left-ul1").find("li").hover(function () {
+                        $(this).children().css({
+                            "color": "red"
+                        });
+
+
+
+                    }, function () {
+                        $(this).children().css({
+                            "color": "#000"
+                        });
+                    })
+
+
+
+                    $(".title-right").find(".dd1").hover(function () {
+                        $(this).children().css({
+                            "color": "red"
+                        });
+
+
+
+                    }, function () {
+                        $(this).children().css({
+                            "color": "#6d6d6d"
+                        });
+                    })
+
+
+                }
+
+
+
+
+
+
+            }
+
+
+
+
+
+            $.getJSON("api/jieceng.json", (json) => {
+                let nav = new Nav(json);
+                nav.init();
+
+            })
+        })
+    </script>
+</body>
+
+</html>

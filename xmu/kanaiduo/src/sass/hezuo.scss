@@ -1,0 +1,45 @@
+.zongjie {
+    margin-bottom: 12px;
+
+    h3 {
+        font-size: 24px;
+        color: #131313;
+        font-family: "微软雅黑";
+        font-weight: normal;
+        margin-bottom: 14px;
+    }
+
+    ul {
+        border-left: 1px solid #f2f2f2;
+        border-top: 1px solid #f2f2f2;
+        overflow: hidden;
+
+        li {
+            width: 170px;
+            float: left;
+            border-right: 1px solid #f2f2f2;
+            border-bottom: 1px solid #f2f2f2;
+        }
+    }
+
+    .link-title {
+        height: 74px;
+        line-height: 74px;
+        color: #131313;
+        font-size: 24px;
+    }
+
+    .link-list {
+        height: 74px;
+
+        a {
+            float: left;
+            height: 74px;
+            line-height: 74px;
+            font-size: 18px;
+            color: #eb4141;
+            text-decoration: none;
+            margin-right: 114px;
+        }
+    }
+}

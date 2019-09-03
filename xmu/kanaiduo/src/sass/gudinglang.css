@@ -1,0 +1,63 @@
+.fixed_navigation {
+  padding-top: 150px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  width: 36px;
+  height: 100%;
+  background: #0066d4;
+}
+
+.fixed_navigation .commonWidth {
+  position: relative;
+  margin-top: 16px;
+  width: 36px;
+  height: 32px;
+  text-align: center;
+  background: url(http://res.360kad.com/theme/default/img/rightbar/right_fixedbg.png) no-repeat;
+}
+
+.fixed_navigation .online_kefu {
+  background: url(http://res.360kad.com/theme/default/img/rightbar/online_hidden.gif?v2016) no-repeat;
+  background-position: 6px 2px;
+  height: 32px;
+}
+
+.fixed_navigation .cart_box {
+  height: 155px;
+  background-position: 0 -52px;
+}
+
+.fixed_navigation .my_mr {
+  background: url(http://res.360kad.com/theme/default/img/rightbar/my_mr.png) no-repeat center;
+  width: 36px;
+  height: 32px;
+}
+
+.fixed_navigation .my_Info {
+  background-position: 0 -226px;
+}
+
+.fixed_navigation .Favorites {
+  background-position: 0 -274px;
+}
+
+.fixed_navigation .view_soon {
+  background-position: 0 -329px;
+}
+
+.fixed_navigation .order_current {
+  background-position: 0 -382px;
+}
+
+.fixed_navigation .inq {
+  background: url(http://tstres.360kad.com/theme/default/img/rightbar/online_inquiry_icon.png) no-repeat center;
+  width: 36px;
+  height: 32px;
+}
+
+.fixed_navigation .tsBox {
+  margin-top: 16px;
+  background-position: 0 -528px;
+}

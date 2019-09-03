@@ -1,0 +1,325 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+.zclb {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+
+
+    .header {
+        width: 100%;
+        height: 89px;
+        border-bottom: 1px solid #c5c5c5;
+        background: #fff;
+        display: flex;
+
+        .logo {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 500px;
+        }
+
+        .t1 {
+            margin-top: 35px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .t2 {
+            margin-top: 35px;
+            font-size: 14px;
+            margin-right: 30px;
+
+            img {
+                height: 17px;
+                width: 17px;
+            }
+        }
+
+        .t3 {
+            margin-top: 35px;
+            font-size: 14px;
+            margin-right: 10px;
+
+            img {
+                height: 22px;
+                width: 22px;
+            }
+        }
+    }
+
+    .nv {
+        margin-top: 20px;
+        background: #4ec3ff;
+        background: url(http://image.360kad.com/group1/M00/2D/B7/CgAgEVctrCiAC1slAAHd-utbGgk880.jpg) #4ec3ff;
+        background-repeat: no-repeat;
+
+    }
+
+    .center {
+        border: 3px solid #ccc;
+        margin-left: 643px;
+        width: 580px;
+        display: flex;
+        background: #fff;
+
+        form {
+
+            float: left;
+            width: 580px;
+            height: 566px;
+            overflow: hidden;
+            border-right: 1px solid #dcdcdc;
+
+
+            input {
+
+
+                width: 240px;
+                border: 1px solid #dcdcdc;
+                height: 35px;
+
+                line-height: 24px;
+                padding-bottom: 3px;
+                background: transparent;
+                vertical-align: middle;
+                text-indent: 20px;
+
+            }
+
+            .title {
+                position: relative;
+                border-bottom: 1px solid #ccc;
+
+
+                .d-left {
+                    width: 50%;
+                    line-height: 30px;
+                    text-align: center;
+                    margin-top: 15px;
+                    border-right: 1px solid #ccc;
+                    margin-bottom: 25px;
+
+                    img {
+                        width: 24px;
+                        height: 30px;
+
+
+
+                    }
+                }
+
+                .heng {
+                    position: absolute;
+                    left: 16px;
+                    bottom: -6px;
+                    width: 100%;
+                    height: 7px;
+                    background: url(../images/1/loginIcon.gif) no-repeat left -37px;
+
+                }
+            }
+
+            .sj {
+                position: relative;
+                margin-top: 30px;
+                margin-bottom: 10px;
+
+                span {
+
+                    line-height: 35px;
+                    margin-left: 133px;
+
+                }
+
+                input {
+                    position: absolute;
+                    left: 210px;
+                }
+
+                .sjtx {
+                    height: 12px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin-top: 5px;
+                    margin-left: 209px;
+
+                }
+            }
+
+            .yzm {
+                position: relative;
+                margin-top: 30px;
+                margin-bottom: 10px;
+
+
+                .s1 {
+
+                    line-height: 35px;
+                    margin-left: 147px;
+
+                }
+
+                input {
+                    position: absolute;
+                    left: 210px;
+                    width: 158px;
+                }
+
+                .captcha {
+                    height: 35px;
+                    width: 72px;
+                    position: absolute;
+                    left: 377px;
+
+                }
+
+                .s2 {
+                    height: 35px;
+                    font-size: 12px;
+                    position: absolute;
+                    left: 460px;
+                    line-height: 35px;
+                }
+
+                .yzmtx {
+                    height: 12px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin-top: 5px;
+                    margin-left: 209px;
+
+                }
+            }
+
+            .jym {
+                position: relative;
+                margin-top: 30px;
+                margin-bottom: 15px;
+
+                span {
+
+                    line-height: 35px;
+                    margin-left: 147px;
+
+                }
+
+                input {
+                    width: 161px;
+                    position: absolute;
+                    left: 210px;
+
+                }
+
+                button {
+                    height: 40px;
+                    line-height: 40px;
+                    position: absolute;
+                    left: 382px;
+                }
+
+                .jymtext {
+                    height: 12px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin-top: 5px;
+                    margin-left: 209px;
+
+                }
+            }
+
+            .mm1 {
+                position: relative;
+                margin-top: 30px;
+                margin-bottom: 10px;
+
+                span {
+
+                    line-height: 35px;
+                    margin-left: 133px;
+
+                }
+
+                input {
+                    position: absolute;
+                    left: 210px;
+                }
+
+                .mmtx {
+                    height: 12px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin-top: 5px;
+                    margin-left: 209px;
+                }
+            }
+
+            .mm2 {
+                position: relative;
+                margin-top: 30px;
+                margin-bottom: 10px;
+
+                span {
+
+                    line-height: 35px;
+                    margin-left: 133px;
+
+                }
+
+                input {
+                    position: absolute;
+                    left: 210px;
+                }
+
+                .mmtx1 {
+                    height: 12px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin-top: 5px;
+                    margin-left: 209px;
+                }
+            }
+
+            .text1 {
+                font-size: 12px;
+                color: #000;
+                margin-left: 130px;
+                margin-bottom: 20px;
+
+                .autologin {
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+
+            .zcan {
+                width: 340px;
+                height: 42px;
+                line-height: 42px;
+                text-align: center;
+                font-size: 15px;
+                color: #fff;
+                border: 1px solid #dc0014;
+                background: #fe0a2e;
+                margin-left: 120px;
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+
+    }
+}

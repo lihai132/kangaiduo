@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/base.css">
+    <link rel="stylesheet" href="sass/goodlist.css">
+
+
+
+
+    <!-- <script src="js/xia.js"></script>
+    <script src="js/goodlist.js"></script> -->
+
+
+</head>
+
+<body>
+    <!-- <img src="json/cx.php" alt=""> -->
+    <div class="box">
+        <div class="header"></div>
+        <div class="nav"></div>
+        <div class="zhuti">
+            <div class="content">
+
+                <ul class="goodlists ">
+
+
+                </ul>
+                <div class="feny">
+                    <a href="###" class="a7">从低到高</a>
+                    <a href="###" class="a1">上一页</a>
+                    <div class="yeshu">
+
+                    </div>
+                    <a href="###" class="a4">下一页</a>
+                    <a href="###" class="a5">从高到低</a>
+
+
+
+                </div>
+            </div>
+            <!-- <img src="json/list.php" alt=""> -->
+        </div>
+        <div class="footer"></div>
+        <div class="fixed_navigation"></div>
+
+    </div>
+    <!-- <img src="json/px1.php" alt=""> -->
+    <script src="../../js/jquery-3.4.1.js"></script>
+
+    <script src="js/xia.js"></script>
+    <script src="js/goodlist.js"></script>
+    <script>
+        $(function () {
+            class List {
+                constructor(response) {
+                    this.data = response.data;
+
+
+                }
+
+                //初始化
+                init() {
+                    this.createYm();
+                    this.createLi();
+                    this.addPx();
+                    this.addCx();
+                    this.addTj();
+
+                }
+                //生成的方法
+                create(list) {
+                    let html = list.map((ele) => {
+                        return ` <li id='${ele.id}'>
+                        <div class="li-tp">
+                            <a href=""><img
+                                    src="${ele.src}"
+                                    alt=""></a>
+                        </div>
+                        <div class="li-title">
+                            <div class="bjt"></div>
+                            <div class="bt"><a href="">${ele.title}</a></div>
+                        </div>
+                        <div class="text">${ele.text}</div>
+                        <div class="price">
+                            <span class="price1">￥<span>${ele.price1}</span>起</span>
+                            <span class="price2">￥${ele.price2}</span>
+                        </div>
+                     </li>`
+                    }).join("");
+
+                    $(".goodlists").html(html);
+
+
+
+                }
+
+
+
+                //生成页码
+                createYm() {
+                    var data = this.data;
+                    var num = 20;
+                    var ys = data.length / num;
+
+                    function create(list) {
+                        let html = list.map((ele) => {
+                            return ` <li>
+                        <div class="li-tp">
+                            <a href=""><img
+                                    src="${ele.src}"
+                                    alt=""></a>
+                        </div>
+                        <div class="li-title">
+                            <div class="bjt"></div>
+                            <div class="bt"><a href="">${ele.title}</a></div>
+                        </div>
+                        <div class="text">${ele.text}</div>
+                        <div class="price">
+                            <span class="price1">￥<span>${ele.price1}</span>起</span>
+                            <span class="price2">￥${ele.price2}</span>
+                        </div>
+                     </li>`
+                        }).join("");
+
+                        $(".goodlists").html(html);
+
+
+
+                    }
+
+
+
+
+                    var html = '';
+                    for (var i = 0; i < ys; i++) {
+                        html += ` <a href="###" class="a2" id="a2">${i+1}</a>
+                       `
+                    }
+
+                    $(".yeshu").append(html);
+
+                    $(".yeshu .a2").eq(0).addClass("dj");
+
+                    //页码的点击事件
+                    $(".yeshu .a2").click(function () {
+
+                        $(this).addClass("dj");
+                        $(this).siblings().removeClass("dj");
+
+
+                        let index = $(this).text();
+                        let num = index * 20;
+                        let pag = (index - 1) * 20;
+
+
+
+
+
+                        //当前页数需要截取的位置
+                        /*
+                        第一页 (1-1)*20      20
+                        第2页 (2-1)*20     20
+                        第3页 (2-1)*20     20
+                        */
+
+
+
+                        let data2 = data.slice(pag, num);
+
+                        create(data2);
+
+                        if (index == 7) {
+                            $(".yeshu .a2").eq(3).css({
+                                "display": "block"
+                            });
+                            $(".yeshu .a2").eq(4).css({
+                                "display": "block"
+                            });
+                            $(".yeshu .a2").eq(5).css({
+                                "display": "block"
+                            });
+                            $(".yeshu .a2").eq(6).css({
+                                "display": "block"
+                            });
+                            $(".yeshu .a2").eq(7).css({
+                                "display": "block"
+                            });
+                            $(".yeshu .a2").eq(8).css({
+                                "display": "block"
+                            });
+                            $(".yeshu .a2").eq(9).css({
+                                "display": "block"
+                            });
+
+
+
+
+                            $(".yeshu .a2").eq(2).css({
+                                "display": "none"
+                            });
+                            $(".yeshu .a2").eq(1).css({
+                                "display": "none"
+                            });
+                            $(".yeshu .a2").eq(0).css({
+                                "display": "none"
+                            });
+
+
+
+
+
+
+
+
+
+                        }
+                    })
+
+
+                    $(".a1").click(function () {
+                        let index1 = $(".dj").text();
+                        if (index1 == 1) {
+
+                            $(this).unbind();
+
+                        } else {
+
+                            let num = (index1 - 1) * 20;
+                            let pag = (index1 - 2) * 20
+                            let data2 = data.slice(pag, num);
+                            create(data2);
+                            console.log(index1);
+
+
+                            console.log($(".yeshu .a2").eq(index1 - 2).text());
+
+
+                            $(".yeshu .a2").eq(index1 - 2).addClass("dj");
+                            $(".yeshu .a2").eq(index1 - 2).siblings().removeClass("dj");
+                            if (index1 == 4) {
+                                $(".yeshu .a2").eq(0).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(1).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(2).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(3).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(4).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(5).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(6).css({
+                                    "display": "block"
+                                });
+
+
+
+
+                                $(".yeshu .a2").eq(7).css({
+                                    "display": "none"
+                                });
+                                $(".yeshu .a2").eq(8).css({
+                                    "display": "none"
+                                });
+                                $(".yeshu .a2").eq(9).css({
+                                    "display": "none"
+                                });
+
+
+
+
+
+
+
+
+
+                            }
+                        }
+
+                    });
+
+
+
+
+                    $(".a4").click(function () {
+                        let index1 = $(".dj").index();
+
+
+                        if (index1 == 9) {
+                            $(this).unbind();
+                        } else {
+                            let num = (index1 + 1) * 20;
+                            let pag = (index1) * 20
+                            let data2 = data.slice(pag, num);
+                            console.log(data2);
+
+                            create(data2);
+                            console.log(index1);
+
+
+
+
+
+                            $(".yeshu .a2").eq(index1 + 1).addClass("dj");
+                            $(".yeshu .a2").eq(index1 + 1).siblings().removeClass("dj");
+                            if (index1 == 6) {
+                                $(".yeshu .a2").eq(3).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(4).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(5).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(6).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(7).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(8).css({
+                                    "display": "block"
+                                });
+                                $(".yeshu .a2").eq(9).css({
+                                    "display": "block"
+                                });
+
+
+
+
+                                $(".yeshu .a2").eq(2).css({
+                                    "display": "none"
+                                });
+                                $(".yeshu .a2").eq(1).css({
+                                    "display": "none"
+                                });
+                                $(".yeshu .a2").eq(0).css({
+                                    "display": "none"
+                                });
+
+
+
+
+
+
+
+
+
+                            }
+                        }
+
+
+
+
+
+
+
+
+                    })
+
+
+
+
+                }
+
+                //生成商品列表li
+                createLi() {
+                    let data = this.data;
+                    var num = 20;
+                    let data1 = data.slice(0, 20)
+
+
+                    this.create(data1);
+
+
+
+
+
+
+
+                }
+
+                //排序
+                addPx() {
+                    $(".feny .a7").click(() => {
+                        console.log(111);
+
+
+                        var order = 'asc';
+                        $.ajax({
+                            type: 'get',
+                            data: {
+                                order: order
+                            },
+                            type: "json",
+                            url: 'json/px1.php',
+                            success: str => {
+
+
+                                let arr = JSON.parse(str);
+                                let data = arr.data;
+                                let data1 = data.slice(0, 20)
+
+                                this.create(data1);
+                            }
+                        })
+                    })
+
+
+
+
+                    $(".feny .a5").click(() => {
+
+
+
+                        var order = 'desc';
+                        $.ajax({
+                            type: 'get',
+                            data: {
+                                order: order
+                            },
+                            type: "json",
+                            url: 'json/px2.php',
+                            success: str => {
+
+
+                                let arr = JSON.parse(str);
+                                let data = arr.data;
+                                let data1 = data.slice(0, 20)
+
+                                this.create(data1);
+                            }
+                        })
+                    })
+                }
+
+                //查询
+                addCx() {
+                    $("#seach-botton").click(() => {
+                        event.preventDefault();
+
+
+                        var value = $("#seach-box").val();
+
+
+
+
+                        var order = '';
+                        $.ajax({
+                            type: 'get',
+                            data: {
+                                order: value,
+                            },
+                            url: 'json/cx.php',
+
+                            success: str => {
+
+                                let arr = JSON.parse(str);
+                                let data1 = arr.data;
+                                this.create(data1);
+
+
+
+
+
+
+
+                                var num = 20;
+                                console.log(data1.length / num);
+
+                                var ys = Math.ceil(data1.length / num);
+                                console.log(ys);
+
+                                var html = '';
+                                for (var i = 0; i < ys; i++) {
+                                    html += ` <a href="###" class="a2" id="a2">${i+1}</a>
+                                    `
+                                }
+
+                                $(".yeshu").html(html);
+
+
+                                $(".yeshu .a2").eq(0).addClass("dj");
+
+
+
+
+
+
+
+
+
+                            }
+                        })
+
+
+
+
+                    })
+                }
+
+
+                //点击跳转详情页
+                addTj() {
+                    $('.goodlists').on("click", 'li img', function () {
+                        event.preventDefault();
+                        let id = this.parentNode.parentNode.parentNode.id;
+                        window.open(
+                            "http://127.0.0.1/code/kangaiduo/xmu/kanaiduo/src/html/xiangqingye/xiangqingye.html?booksId=" +
+                            id);
+
+
+                    })
+
+
+
+
+
+                    $('.goodlists').on("click", 'li .bt', function () {
+                        event.preventDefault();
+                        let id = this.parentNode.parentNode.parentNode.id;
+                        window.open(
+                            "http://127.0.0.1/code/kangaiduo/xmu/kanaiduo/src/html/xiangqingye/xiangqingye.html?booksId=" +
+                            id);
+
+
+                    })
+
+                }
+            }
+
+
+
+
+            $.ajax({
+                type: "post",
+                url: "json/list.php",
+                type: "json",
+                success: function (response) {
+
+
+                    var response = JSON.parse(response);
+
+                    let list = new List(response);
+                    list.init();
+
+
+                }
+            })
+
+
+
+
+
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>
