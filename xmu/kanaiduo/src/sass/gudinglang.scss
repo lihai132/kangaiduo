@@ -15,12 +15,76 @@
         height: 32px;
         text-align: center;
         background: url(http://res.360kad.com/theme/default/img/rightbar/right_fixedbg.png) no-repeat;
+
+
+        .jt {
+            z-index: 33;
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: -5px;
+            color: #ff8b02;
+        }
+
+        .y2 {
+            z-index: 33;
+            display: none;
+            width: 80px;
+            height: 32px;
+            font-size: 12px;
+            line-height: 32px;
+            position: absolute;
+            top: 0px;
+            left: -80px;
+            background: #ff8b02;
+            border: 1px solid #ff8b02;
+        }
     }
 
     .online_kefu {
         background: url(http://res.360kad.com/theme/default/img/rightbar/online_hidden.gif?v2016) no-repeat;
         background-position: 6px 2px;
         height: 32px;
+        position: relative;
+
+        .jt {
+            z-index: 33;
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: -5px;
+            color: #ffffff;
+        }
+
+        .y1 {
+            z-index: 33;
+            display: none;
+
+            position: absolute;
+            top: 0px;
+            left: -107px;
+            width: 80px;
+            height: 107px;
+
+            .y-d1,
+            .y-d2 {
+                z-index: 33;
+
+
+                text-align: right;
+                padding-right: 5px;
+                background: url(http://res.360kad.com/theme/default/img/rightbar/right_fixedbg.png) #ffffff;
+                background-repeat: no-repeat;
+                background-position: 12px -772px;
+                width: 107px;
+                height: 32px;
+                font-size: 12px;
+                line-height: 32px;
+
+                // background: #ffffff;
+                border: 1px solid #ccc;
+            }
+        }
     }
 
     .cart_box {
@@ -32,6 +96,31 @@
         background: url(http://res.360kad.com/theme/default/img/rightbar/my_mr.png) no-repeat center;
         width: 36px;
         height: 32px;
+        position: relative;
+        text-align: center;
+
+        .jt {
+            z-index: 33;
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: -5px;
+            color: #ff8b02;
+        }
+
+        .y2 {
+            z-index: 33;
+            display: none;
+            width: 80px;
+            height: 32px;
+            font-size: 12px;
+            line-height: 32px;
+            position: absolute;
+            top: 0px;
+            left: -80px;
+            background: #ff8b02;
+            border: 1px solid #ff8b02;
+        }
     }
 
     .my_Info {

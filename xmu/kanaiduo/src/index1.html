@@ -42,14 +42,38 @@
         <div id="hezuo"></div>
         <div id="footer"></div>
         <div class="fixed_navigation">
-            <div class="online_kefu"></div>
+            <div class="online_kefu">
+                <div class="jt">◆</div>
+                <div class="y1">
+                    <div class="y-d1">售前咨询</div>
+                    <div class="y-d2">售后咨询</div>
+                </div>
+            </div>
             <div class="cart_box commonWidth"></div>
-            <div class="my_mr"></div>
-            <div class="my_Info commonWidth"></div>
-            <div class="Favorites commonWidth"></div>
-            <div class="view_soon commonWidth"></div>
-            <div class="order_current commonWidth order_current_hover"></div>
-            <div class="tsBox commonWidth"></div>
+            <div class="my_mr">
+                <div class="jt">◆</div>
+                <div class="y2"><a href="">需求清单</a></div>
+            </div>
+            <div class="my_Info commonWidth">
+                <div class="jt">◆</div>
+                <div class="y2"><a href="">我的账号</a></div>
+            </div>
+            <div class="Favorites commonWidth">
+                <div class="jt">◆</div>
+                <div class="y2"><a href="">我的收藏</a></div>
+            </div>
+            <div class="view_soon commonWidth">
+                <div class="jt">◆</div>
+                <div class="y2"><a href="">最近浏览</a></div>
+            </div>
+            <div class="order_current commonWidth order_current_hover">
+                <div class="jt">◆</div>
+                <div class="y2"><a href="">最近购买</a></div>
+            </div>
+            <div class="tsBox commonWidth">
+                <div class="jt">◆</div>
+                <div class="y2"><a href="">我要反馈</a></div>
+            </div>
         </div>
 
     </div>
@@ -66,9 +90,33 @@
     <script>
         $(function () {
             $("#header").load("html/header.html", function () {
+
                 $("#header").css({
                     "height": "143px"
+                });
+
+                //登录
+
+
+
+                $(".left .dl").click(() => {
+
+                    window.location.href =
+                        "http://127.0.0.1/code/kangaiduo/xmu/kanaiduo/src/html/dlu/dl.html";
+
+
+
+                });
+
+                $(".left .zc").click(() => {
+
+                    window.location.href =
+                        "http://127.0.0.1/code/kangaiduo/xmu/kanaiduo/src/html/zc/zc.html";
+
+
+
                 })
+
 
 
 
@@ -115,6 +163,62 @@
             });
 
 
+            //侧边固定栏划过显示
+            $(".online_kefu").hover(function () {
+                $(this).find(".jt").css({
+                    "display": "block"
+                });
+
+                $(this).find(".y1").css({
+                    "display": "block"
+                });
+            }, function () {
+                $(this).find(".jt").css({
+                    "display": "none"
+                });
+
+                $(this).find(".y1").css({
+                    "display": "none"
+                });
+            });
+
+
+
+            $(".my_mr").hover(function () {
+                $(this).find(".jt").css({
+                    "display": "block"
+                });
+
+                $(this).find(".y2").css({
+                    "display": "block"
+                });
+            }, function () {
+                $(this).find(".jt").css({
+                    "display": "none"
+                });
+
+                $(this).find(".y2").css({
+                    "display": "none"
+                });
+            })
+
+            $(".commonWidth").hover(function () {
+                $(this).find(".jt").css({
+                    "display": "block"
+                });
+
+                $(this).find(".y2").css({
+                    "display": "block"
+                });
+            }, function () {
+                $(this).find(".jt").css({
+                    "display": "none"
+                });
+
+                $(this).find(".y2").css({
+                    "display": "none"
+                });
+            })
 
 
 

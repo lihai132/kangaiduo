@@ -22,12 +22,12 @@ $(function () {
     let oPassword2 = $(".mm2k");;
     let oSendphone = $(".bt1")
 
-    console.log("++++", Captcha);
+
 
     /* 验证码处理 */
-    (new Captcha({
+    new Captcha({
         fontSize: 20
-    })).draw(document.querySelector('#captcha'), r => {
+    }).draw(document.querySelector('#captcha'), r => {
         console.log(r, '验证码1');
         imgCodeText = r;
         imgCodeText = imgCodeText.toLowerCase();
@@ -274,7 +274,7 @@ $(function () {
                     if (response.status == "success") {
                         alert(response.msg);
                         /* 跳转到登录页面 */
-                        // window.location.href = "http://127.0.0.1/code/kangaiduo/xmu/kanaiduo/src/index1.html";
+                        window.location.href = "http://127.0.0.1/code/kangaiduo/xmu/kanaiduo/src/html/dlu/dl.html";
 
                     } else {
                         alert(response.msg);

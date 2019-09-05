@@ -1238,6 +1238,8 @@ body {
 .box .fixed_navigation .cart_box {
   height: 155px;
   background-position: 0 -52px;
+  line-height: 244px;
+  color: red;
 }
 
 .box .fixed_navigation .my_mr {

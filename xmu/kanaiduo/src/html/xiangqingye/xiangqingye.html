@@ -224,7 +224,7 @@
                                         </div>
                                     </div>
                                     <div class="dtl-inf-com dtl-inf-left clearfix">
-                                        <a href="">加入购物车</a>
+                                        <a href="" id="push">加入购物车</a>
                                     </div>
                                     <div class="dtl-inf-com clearfix">
                                         <span class="b2">承诺</span>
@@ -353,9 +353,35 @@
                     $(".magnifier-view img").attr("src", new_src);
 
 
+                    $("#push").click(() => {
+                        event.preventDefault();
+                        console.log(id);
+                        console.log(arr[0].price1);
 
 
+                        $.ajax({
+                            type: "post",
+                            url: "json/addCat.php",
+                            data: {
+                                id: id,
+                                price: arr[0].price1
+                            },
+                            dataType: "json",
+                            success: str => {
+                                let sl = str.data.count;
+                                $(".cart_box").text(sl);
 
+                            }
+                        })
+
+
+                    })
+
+                    $(".cart_box").click(() => {
+                        window.open(
+                            "http://127.0.0.1/code/kangaiduo/xmu/kanaiduo/src/html/car/car.html"
+                        );
+                    })
 
 
 
